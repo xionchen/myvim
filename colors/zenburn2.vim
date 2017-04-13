@@ -163,14 +163,14 @@ hi SpellLocal guisp=#7cac7c guifg=#9ccc9c
 
 " Entering Kurt zone
 if &t_Co > 255
-    hi Boolean         ctermfg=181
-    hi Character       ctermfg=181   cterm=bold
-    hi Comment         ctermfg=108
-    hi Conditional     ctermfg=223   cterm=bold
-    hi Constant        ctermfg=181   cterm=bold
+    hi Boolean         ctermfg=11
+    hi Character       ctermfg=11   cterm=bold
+    hi Comment         ctermfg=247
+    hi Conditional     ctermfg=118   cterm=bold
+    hi Constant        ctermfg=11   cterm=bold
     hi Cursor          ctermfg=233   ctermbg=109     cterm=bold
-    hi Debug           ctermfg=181   cterm=bold
-    hi Define          ctermfg=223   cterm=bold
+    hi Debug           ctermfg=11   cterm=bold
+    hi Define          ctermfg=172   cterm=bold
     hi Delimiter       ctermfg=245
     hi DiffAdd         ctermfg=66    ctermbg=237     cterm=bold
     hi DiffChange      ctermbg=236
@@ -182,7 +182,7 @@ if &t_Co > 255
     hi Float           ctermfg=251
     hi FoldColumn      ctermfg=109   ctermbg=238
     hi Folded          ctermfg=109   ctermbg=238
-    hi Function        ctermfg=228
+    hi Function        ctermfg=118
     hi Identifier      ctermfg=223
     hi IncSearch       ctermbg=228   ctermfg=238
     hi Keyword         ctermfg=223   cterm=bold
@@ -191,28 +191,28 @@ if &t_Co > 255
     hi Macro           ctermfg=223   cterm=bold
     hi ModeMsg         ctermfg=223   cterm=none
     hi MoreMsg         ctermfg=15    cterm=bold
-    hi Number          ctermfg=116
-    hi Operator        ctermfg=230
+    hi Number          ctermfg=172
+    hi Operator        ctermfg=187   cterm=bold
     hi PreCondit       ctermfg=180   cterm=bold
     hi PreProc         ctermfg=223   cterm=bold
     hi Question        ctermfg=15    cterm=bold
-    hi Repeat          ctermfg=223   cterm=bold
+    hi Repeat          ctermfg=118   cterm=bold
     hi Search          ctermfg=230   ctermbg=236
-    hi SpecialChar     ctermfg=181   cterm=bold
+    hi SpecialChar     ctermfg=11   cterm=bold
     hi SpecialComment  ctermfg=108   cterm=bold
-    hi Special         ctermfg=181
+    hi Special         ctermfg=11
     hi SpecialKey      ctermfg=151
-    hi Statement       ctermfg=187   ctermbg=234     cterm=none
+    hi Statement       ctermfg=118   cterm=none
     hi StatusLine      ctermfg=236   ctermbg=186
     hi StatusLineNC    ctermfg=235   ctermbg=108
     hi StorageClass    ctermfg=249   cterm=bold
-    hi String          ctermfg=174
+    hi String          ctermfg=011
     hi Structure       ctermfg=229   cterm=bold
-    hi Tag             ctermfg=181   cterm=bold
+    hi Tag             ctermfg=11   cterm=bold
     hi Title           ctermfg=7     ctermbg=234     cterm=bold
     hi Todo            ctermfg=108   ctermbg=234     cterm=bold
     hi Typedef         ctermfg=253   cterm=bold
-    hi Type            ctermfg=187   cterm=bold
+    hi Type            ctermfg=11   cterm=bold
     hi Underlined      ctermfg=188   ctermbg=234     cterm=bold
     hi VertSplit       ctermfg=236   ctermbg=65
     hi VisualNOS       ctermfg=236   ctermbg=210     cterm=bold
@@ -238,7 +238,7 @@ if &t_Co > 255
             hi Ignore          ctermfg=238
         endif
     else
-        hi Normal ctermfg=188 ctermbg=237
+        hi Normal ctermfg=231 ctermbg=238
         hi Cursor          ctermbg=109
         hi diffadd         ctermbg=237
         hi diffdelete      ctermbg=238
@@ -249,7 +249,6 @@ if &t_Co > 255
         hi incsearch       ctermbg=228
         hi linenr          ctermbg=238
         hi search          ctermbg=238
-        hi statement       ctermbg=237
         hi statusline      ctermbg=144
         hi statuslinenc    ctermbg=108
         hi title           ctermbg=237

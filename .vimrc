@@ -22,6 +22,24 @@ set t_Co=256
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+"""""""""
+"easymotion
+"""""""""
+"<Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 """""""""""
 "ctags
 "http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
@@ -55,18 +73,20 @@ set ic
 
 call pathogen#runtime_append_all_bundles()
 
-filetype on
+"filetype on
+filetype off
 filetype plugin on
 filetype plugin indent on
 
 call pathogen#infect()
+call pathogen#helptags()
 filetype plugin indent on
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
-colorscheme solarized
+colorscheme solarized2
 
 
 
@@ -176,27 +196,23 @@ endif
 function! AppendPyHeader()
     call append(0, '#!/usr/bin/env python')
     call append(1, '#-*- coding:utf-8 -*-')
-    call append(2, '# Author: Kun Huang <academicgareth@gmail.com>')
 endfunction
 autocmd BufNewFile *.py call AppendPyHeader()
 
 function! AppendCSSHeader()
     call append(0, '/*')
-    call append(1, 'Author: Kun Huang <academicgareth@gmail.com>')
     call append(2, '*/')
 endfunction
 autocmd BufNewFile *.css call AppendCSSHeader()
 
 function! AppendJsHeader()
     call append(0, '/*')
-    call append(1, 'Author: Kun Huang <academicgareth@gmail.com>')
     call append(2, '*/')
 endfunction
 autocmd BufNewFile *.js call AppendJsHeader()
 
 function! AppendShHeader()
     call append(0, '#!/bin/bash')
-    call append(1, '# Author: Kun Huang <academicgareth@gmail.com>')
 endfunction
 autocmd BufNewFile *.sh call AppendShHeader()
 
